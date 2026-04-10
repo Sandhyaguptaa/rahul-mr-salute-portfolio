@@ -2,6 +2,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+  .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* Hover effect */
+.gallery img:hover {
+  transform: scale(1.08);
+  filter: brightness(1.2);
+}
+  
   <title>Rahul MR SALUTE - Official Artist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -78,7 +100,7 @@
     }
   </style>
 </head>
-
+  
 <body>
 
   <div class="hero">
@@ -98,7 +120,7 @@
   <!-- MUSIC -->
   <div class="section music">
     <h2>🎵 kachre hai tabhi bachre hai</h2>
-    <p>Play your song here</p>
+    <p>https://youtu.be/s00MmNfsRjE?si=y2QDNTcFH3i0KH0-</p>
     <audio controls>
       <source src="song.mp3" type="audio/mpeg">
       Your browser does not support audio.
@@ -165,81 +187,13 @@
 </section>
 
 <section id="work">
+  <section id="work">
   <h2>My Work</h2>
-  <ul>
-    <li>🎵 Delhi Ke Londey (Song)</li>
-    <li>🎬 Street Videos</li>
-    <li>📱 Social Content Creator</li>
-  </ul>
-</section>
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b0b0b;
-  color: white;
-}
-
-/* Hero */
-.hero {
-  padding: 100px 20px;
-  text-align: center;
-  background: radial-gradient(circle, #ff004c, #000);
-}
-
-/* Button */
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: white;
-  color: black;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  transform: scale(1.1);
-  background: #ff004c;
-  color: white;
-}
-
-/* Links */
-.links a {
-  margin: 10px;
-  color: #00ffd5;
-  text-decoration: none;
-}
-
-/* Sections */
-section {
-  padding: 60px 20px;
-}
-
-/* Animations */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1.2s forwards;
-}
-
-.delay {
-  animation-delay: 0.5s;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-/* Pulse Button */
-.pulse {
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
+  <div class="gallery">
+    <img src="images/1.jpg" alt="">
+    <img src="images/2.jpg" alt="">
+    <img src="images/3.jpg" alt="">
+    <img src="images/4.jpg" alt="">
+  </div>
+  </section>
