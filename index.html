@@ -1,115 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rahul Mr Salute | Official</title>
+  <meta charset="UTF-8">
+  <title>Rahul Mr Salute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0d0d0d;
-    color: white;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+    }
 
-header {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), black),
-    url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4');
-    background-size: cover;
-    text-align: center;
-}
+    body {
+      background: #0a0a0a;
+      color: white;
+    }
 
-header h1 {
-    font-size: 3rem;
-    margin: 0;
-}
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-header p {
-    font-size: 1.2rem;
-    color: #ccc;
-}
+    .hero video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.btn {
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: red;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-right: 10px;
-}
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
 
-section {
-    padding: 50px 20px;
-    text-align: center;
-}
+    .hero-content {
+      position: relative;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
-.video iframe {
-    width: 90%;
-    max-width: 600px;
-    height: 315px;
-}
+    .hero h1 {
+      font-size: 60px;
+      letter-spacing: 3px;
+    }
 
-.projects div {
-    margin: 15px 0;
-    padding: 15px;
-    background: #1a1a1a;
-    border-radius: 10px;
-}
+    .hero p {
+      margin: 20px 0;
+      font-size: 20px;
+    }
 
-footer {
-    background: black;
-    padding: 20px;
-}
-</style>
+    .btn {
+      padding: 12px 25px;
+      margin: 10px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .red {
+      background: #ff0033;
+      color: white;
+    }
+
+    .glass {
+      border: 1px solid white;
+      color: white;
+    }
+
+    /* SECTION */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+
+    /* CARDS */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      width: 250px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff0033;
+    }
+
+    /* STATS */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .stat h3 {
+      font-size: 40px;
+      color: gold;
+    }
+
+    /* CONTACT */
+    .contact a {
+      display: block;
+      margin: 10px;
+      color: white;
+    }
+
+  </style>
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+<section class="hero">
+  <video autoplay muted loop>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
     <h1>RAHUL MR SALUTE</h1>
-    <p>Delhi ka rising artist & influencer supporter</p>
-
-    <a href="#" class="btn">Watch Latest Song</a>
-    <a href="#" class="btn">Follow on Instagram</a>
-</header>
-
-<section class="video">
-    <h2>🎬 Latest Release</h2>
-    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_LINK"
-    frameborder="0" allowfullscreen></iframe>
+    <p>Delhi Streets Se Global Vibe Tak</p>
+    <a href="#" class="btn red">Watch Music</a>
+    <a href="#" class="btn glass">Book Collab</a>
+  </div>
 </section>
 
-<section class="projects">
-    <h2>🔥 Projects</h2>
-
-    <div>
-        <h3>Basti Ek Daldal</h3>
-        <p>Crime | Drama | Thriller Web Series</p>
-    </div>
-
-    <div>
-        <h3>Delhi Ke Londe</h3>
-        <p>Street Hip-Hop Song</p>
-    </div>
-
-</section>
-
+<!-- PROJECTS -->
 <section>
-    <h2>📞 Contact</h2>
-    <p>Email: rahulbrain47@gmail.com</p>
-    <p>Instagram: @rahul_mr_salute</p>
+  <h2>🔥 Featured Projects</h2>
+  <div class="cards">
+    <div class="card">Delhi Ke Londey 🎵</div>
+    <div class="card">Basti Ek Daldal 🎬</div>
+    <div class="card">Viral Reels 🔥</div>
+  </div>
 </section>
 
-<footer>
-    <p>© 2026 Rahul Mr Salute</p>
-</footer>
+<!-- STATS -->
+<section>
+  <h2>💎 Achievements</h2>
+  <div class="stats">
+    <div class="stat">
+      <h3>100K+</h3>
+      <p>Views</p>
+    </div>
+    <div class="stat">
+      <h3>50K+</h3>
+      <p>Followers</p>
+    </div>
+    <div class="stat">
+      <h3>20+</h3>
+      <p>Collaborations</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section>
+  <h2>👑 About Me</h2>
+  <p>
+    Delhi ki galiyon se nikla ek awaaz jo sirf music nahi,
+    ek movement ban raha hai. Rahul Mr Salute ek naam nahi,
+    ek brand hai.
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <h2>📞 Contact</h2>
+  <a href="#">WhatsApp</a>
+  <a href="#">Instagram</a>
+  <a href="#">Email</a>
+</section>
 
 </body>
 </html>
